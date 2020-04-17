@@ -1,0 +1,49 @@
+Ubuntu Virtual Machine Build Notes
+
+4GB RAM, 80GB VDI
+Ubuntu 18.04.4 Installation
+- Minimal Installation
+- Download updates while installing Ubuntu
+- Install third-party software for graphics and Wi-Fi hardware and additional media formats
+Installation Type
+- Erase disk and install Ubuntu
+- Encrypt the new Ubuntu installation for security
+- Use LVM with the new Ubuntu installation
+Choose a security key
+- UbuntuT3$t
+Where are you?
+- New York
+Who are you?
+- Your name: Walt Pritz
+- Your computer's name: WLVM00000001
+- Pick a username: wpritz
+- Choose a password: C!...
+- Require my password to login
+*** Reboot ***
+*** Snapshot - Minimal Install ***
+
+Install updates 
+sudo apt update & sudo apt upgrade
+Install gcc, make - sudo apt install build-essential
+Cleanup - sudo apt autoremove & sudo apt clean
+Install VirtualBox Guest Add-ons
+
+*** Reboot ***
+*** Snapshot - Bare Bones ***
+
+Notes
+Best Practices
+- etckeeper to use version control for /etc
+
+More research
+Sync passwords with AD - krb5-sync / krb5-sync-tools
+Sync LUKS and PAM password
+- sudo cryptsetup luksChangeKey /dev/sda5 {Must verify drive}
+Enter old passphrase
+Enter new passphrase (twice)
+
+
+From Ubuntu Server Guide on Joining to Active Directory
+- Domain Controller is the primary DNS provider in /etc/resolv.conf
+-- Interesting enough, when on JJNet, search is set to wks.jnj.com
+
